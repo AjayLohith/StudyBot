@@ -1,37 +1,7 @@
 # 📚 StudyBot - AI Powered PDF Chatbot
 
 An intelligent **Retrieval-Augmented Generation (RAG)** chatbot that allows users to upload PDF documents and ask natural language questions about their content. Instead of relying on the LLM's pre-trained knowledge, StudyBot retrieves relevant information from the uploaded document and generates context-aware answers using **Google Gemini**.
-
 ---
-
-## 🚀 Live Demo
-
-🔗 **Demo:** https://your-streamlit-url.streamlit.app
-
----
-
-## 📸 Preview
-
-> Add screenshots here
-
-| Upload PDF | Ask Questions |
-|------------|---------------|
-| ![](images/upload.png) | ![](images/chat.png) |
-
----
-
-# ✨ Features
-
-- 📄 Upload any PDF document
-- 🤖 Ask questions in natural language
-- 🔍 Semantic Search using Vector Embeddings
-- 🧠 Retrieval-Augmented Generation (RAG)
-- ⚡ Google Gemini 2.5 Flash LLM
-- 📚 FAISS Vector Database
-- ✂️ Automatic Text Chunking
-- 💬 Context-aware responses
-- 🔄 Upload a new PDF without refreshing
-- ☁️ Streamlit Cloud Deployment
 
 ---
 
@@ -51,6 +21,28 @@ An intelligent **Retrieval-Augmented Generation (RAG)** chatbot that allows user
 </p>
 
 ---
+
+## 🚀 Live Demo
+
+🔗 **Demo:** https://studybottt.streamlit.app
+
+---
+
+
+# ✨ Features
+
+- 📄 Upload any PDF document
+- 🤖 Ask questions in natural language
+- 🔍 Semantic Search using Vector Embeddings
+- 🧠 Retrieval-Augmented Generation (RAG)
+- ⚡ Google Gemini 2.5 Flash LLM
+- 📚 FAISS Vector Database
+- ✂️ Automatic Text Chunking
+- 💬 Context-aware responses
+- 🔄 Upload a new PDF without refreshing
+- ☁️ Streamlit Cloud Deployment
+
+
 
 # 🏗️ System Architecture
 
