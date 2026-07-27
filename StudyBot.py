@@ -42,8 +42,9 @@ if "vector_store" not in st.session_state:
 if "chunks" not in st.session_state:
     st.session_state.chunks = None
 
-if "pdf_uploaded" not in st.session_state:
-    st.session_state.pdf_uploaded = False
+# Stores the currently processed PDF filename
+if "current_pdf" not in st.session_state:
+    st.session_state.current_pdf = None
 
 # ------------------------------------
 # Sidebar
@@ -59,7 +60,14 @@ with st.sidebar:
 # ------------------------------------
 # Process PDF
 # ------------------------------------
-if uploaded_file is not None and not st.session_state.pdf_uploaded:
+if (
+    uploaded_file is not None
+    and uploaded_file.name != st.session_state.current_pdf
+):
+
+    # Clear previous data
+    st.session_state.vector_store = None
+    st.session_state.chunks = None
 
     st.info("Processing PDF...")
 
@@ -127,7 +135,7 @@ if uploaded_file is not None and not st.session_state.pdf_uploaded:
         )
 
         st.session_state.vector_store = vector_store
-        st.session_state.pdf_uploaded = True
+        st.session_state.current_pdf = uploaded_file.name
 
         st.success("Vector Store Created Successfully")
 
@@ -218,6 +226,6 @@ if st.button("Upload New PDF"):
 
     st.session_state.vector_store = None
     st.session_state.chunks = None
-    st.session_state.pdf_uploaded = False
+    st.session_state.current_pdf = None
 
     st.rerun()
